@@ -109,7 +109,14 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+    // Volume control.
+    { MODKEY,			            XK_F7,	spawn,		   SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		        XK_F7,	spawn,		   SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			            XK_F9,	spawn,		   SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY|ShiftMask,		        XK_F9,	spawn,		   SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,		                XK_F8,	spawn,		   SHCMD("pamixer --toggle-mute; kill -44 $(pidof dwmblocks)") },
+
+	{ MODKEY|ShiftMask,             XK_q,       quit,           {0} },
 };
 
 /* button definitions */
