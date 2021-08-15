@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 // Use Pywal's colour scheme. Part of the 'Urgent' patch
-#include "colors-wal-dwm.h"
+#include "/home/stefan/.cache/wal/colors-wal-dwm.h"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
